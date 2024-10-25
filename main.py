@@ -7,19 +7,15 @@ def filling_in_the_list():
     list_elements = []
     while True:
         input_element = input("Введите элемент:\n")
-        list_elements.append(input_element)
         if input_element == "000":
-            list_elements.remove("000")
             break
+        list_elements.append(input_element)
     return list_elements
 
 
 def print_unique_elements(completed_list):
     unique_elements = set(completed_list)
-    print(f"\nКоличество уникальных элементов в списке: {len(unique_elements)}\n"
-          f"\nУникальные элементы:")
-    for element in unique_elements:
-        print(element)
+    print(f"\nКоличество уникальных элементов в списке: {len(unique_elements)}")
 
 
 print_unique_elements(filling_in_the_list())
